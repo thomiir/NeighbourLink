@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab6.controller.RegisterPageController">
+    <children>
+        <VBox alignment="CENTER" layoutX="164.0" layoutY="27.0" prefHeight="447.0" prefWidth="172.0">
+         <children>
+             <Label alignment="CENTER" prefHeight="82.0" prefWidth="172.0" text="NeighbourLink">
+               <font>
+                  <Font name="Cambria Italic" size="22.0" />
+               </font></Label>
+             <Label prefHeight="30.0" text="Full name:" />
+             <TextField fx:id="textFieldFullName" />
+             <Label prefHeight="30.0" text="Email:" />
+             <TextField fx:id="textFieldEmail" />
+             <Label prefHeight="30.0" text="Address:" />
+             <TextField fx:id="textFieldAddress" />
+             <Label prefHeight="30.0" text="Zip Code:" />
+             <TextField fx:id="textFieldZipCode" />
+             <Label prefHeight="30.0" text="Username:" />
+             <TextField fx:id="textFieldUsername" />
+             <Label prefHeight="30.0" prefWidth="53.0" text="Password:" />
+             <PasswordField fx:id="passwordFieldPassword" />
+             <Separator opacity="0.0" prefHeight="17.0" prefWidth="172.0" />
+             <Button mnemonicParsing="false" onAction="#handleButtonCreateAccountClicked" text="Create account" />
+         </children></VBox>
+    </children>
+</AnchorPane>

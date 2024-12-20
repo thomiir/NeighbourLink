@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab6.controller.AddFriendPageController">
+   <children>
+      <VBox prefHeight="500.0" prefWidth="500.0" spacing="20" styleClass="vbox">
+         <children>
+            <HBox prefHeight="25.0" prefWidth="435.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleBackButtonClicked" text="Back" />
+                  <Separator opacity="0.0" orientation="VERTICAL" prefHeight="200.0" />
+                  <Label style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #4a4a4a;" text="Search user: " />
+               </children>
+            </HBox>
+            <TextField />
+           <TableView fx:id="tableViewUsers" prefHeight="356.0" prefWidth="500.0" style="-fx-background-color: #f4f4f4;">
+               <columns>
+                  <TableColumn fx:id="tableColumnFullName" prefWidth="243.0" style="-fx-text-fill: #4a4a4a;" text="Full name" />
+                  <TableColumn fx:id="tableColumnUsername" prefWidth="256.0" style="-fx-text-fill: #4a4a4a;" text="Username" />
+               </columns>
+            </TableView>
+            <Separator opacity="0.0" prefHeight="29.0" prefWidth="500.0" />
+            <HBox prefHeight="74.0" prefWidth="500.0">
+               <children>
+                  <Separator opacity="0.0" orientation="VERTICAL" prefHeight="89.0" prefWidth="59.0" />
+                  <Button fx:id="buttonRequest" mnemonicParsing="false" onAction="#handleButtonRequestClicked" prefHeight="42.0" prefWidth="354.0" styleClass="button" text="Send a request!" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

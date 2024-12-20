@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" styleClass="anchor-pane" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab6.controller.MainPageController">
+    <children>
+        <VBox prefHeight="500.0" prefWidth="500.0" spacing="20" styleClass="vbox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+            <HBox styleClass="title-label" stylesheets="@../css/styles.css">
+               <children>
+                      <Label alignment="CENTER" text="All Tasks" textFill="WHITE">
+                          <font>
+                              <Font name="Cooper Black" size="28.0" />
+                          </font>
+                      </Label>
+               </children>
+            </HBox>
+            <TableView fx:id="tableViewTasks" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="379.0" prefWidth="468.0">
+              <columns>
+                  <TableColumn fx:id="columnIndex" editable="false" maxWidth="61.0" prefWidth="20.0" resizable="false" sortable="false" style="-fx-wrap-text: true;" />
+                <TableColumn fx:id="columnType" editable="false" prefWidth="65.0" resizable="false" style="-fx-wrap-text: true;" text="TYPE" />
+                <TableColumn fx:id="columnTitle" editable="false" prefWidth="127.0" resizable="false" style="-fx-wrap-text: true;" text="TITLE" />
+                  <TableColumn fx:id="columnPoster" editable="false" prefWidth="68.0" resizable="false" sortable="false" style="-fx-wrap-text: true;" text="POSTER" />
+                  <TableColumn fx:id="columnTimePosted" editable="false" prefWidth="114.0" resizable="false" style="-fx-wrap-text: true;" text="DATE" />
+                  <TableColumn fx:id="columnDuration" editable="false" minWidth="0.0" prefWidth="72.0" style="-fx-wrap-text: true;" text="DURATION" />
+              </columns>
+            </TableView>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="buttonPrevious" mnemonicParsing="false" onAction="#handleButtonPreviousClicked" text="Previous" />
+                  <Label fx:id="labelPageNumber" alignment="CENTER" prefHeight="17.0" prefWidth="364.0" text="Label" textFill="WHITE">
+                     <font>
+                        <Font name="Cooper Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="buttonNext" mnemonicParsing="false" onAction="#handleButtonNextClicked" text="Next" />
+               </children>
+            </HBox>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="500.0" spacing="40" styleClass="button-bar" stylesheets="@../css/styles.css">
+                  <children>
+                      <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleButtonTasksClicked" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../images/main-menu.png" />
+                          </image>
+                      </ImageView>
+
+                      <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleButtonCommunityClicked" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../images/neighborhood.png" />
+                          </image>
+                      </ImageView>
+
+                      <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleButtonChatClicked" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../images/chat.png" />
+                          </image>
+                      </ImageView>
+
+                      <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleButtonFriendsClicked" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../images/friends.png" />
+                          </image>
+                      </ImageView>
+
+                      <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleButtonMyTasksClicked" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../images/task iconpng.png" />
+                          </image>
+                      </ImageView>
+
+                      <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleButtonProfileClicked" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../images/user.png" />
+                          </image>
+                      </ImageView>
+                  </children>
+              </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

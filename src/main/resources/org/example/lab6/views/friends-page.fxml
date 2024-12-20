@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab6.controller.FriendsPageController">
+    <children>
+        <VBox prefHeight="500.0" prefWidth="500.0" spacing="20" styleClass="vbox">
+            <children>
+                <Label prefHeight="22.0" prefWidth="268.0" text="Friends and Requests" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="24.0" />
+               </font></Label>
+                <HBox alignment="CENTER" spacing="30">
+                    <VBox spacing="15" styleClass="vbox">
+                        <children>
+                            <Label text="Requests" textFill="WHITE">
+                        <font>
+                           <Font name="Georgia Bold" size="16.0" />
+                        </font></Label>
+                            <ListView fx:id="listViewRequests" stylesheets="@../css/styles.css" />
+                            <ButtonBar>
+                                <buttons>
+                                    <Button onAction="#handleButtonAcceptRequestClicked" style="-fx-border-radius: 15; -fx-padding: 10; -fx-background-color: #00ADB5;" text="Accept" />
+                                    <Button onAction="#handleButtonDeleteRequestClicked" style="-fx-border-radius: 15; -fx-padding: 10; -fx-background-color: #00ADB5;" text="Delete" />
+                                </buttons>
+                            </ButtonBar>
+                        </children>
+                    </VBox>
+                    <VBox spacing="15" styleClass="vbox">
+                        <children>
+                            <Label text="Friends" textFill="WHITE">
+                        <font>
+                           <Font name="Georgia Bold" size="16.0" />
+                        </font></Label>
+                            <ListView fx:id="listViewFriends" styleClass="list-view" />
+                            <ButtonBar>
+                                <buttons>
+                                    <Button onAction="#handleButtonAddFriendClicked" prefHeight="37.0" prefWidth="167.0" style="-fx-border-radius: 15; -fx-padding: 10; -fx-background-color: #00ADB5;" text="Add" />
+                                    <Button onAction="#handleButtonDeleteFriendClicked" prefHeight="37.0" style="-fx-border-radius: 15; -fx-padding: 10; -fx-background-color: #00ADB5;" text="Delete" />
+                                </buttons>
+                            </ButtonBar>
+                        </children>
+                    </VBox>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="11.0" prefWidth="468.0" spacing="40">
+                    <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleButtonTasksClicked" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/main-menu.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleButtonCommunityClicked" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/neighborhood.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleButtonChatClicked" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/chat.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleButtonFriendsClicked" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/friends.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleButtonProfileClicked" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/user.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

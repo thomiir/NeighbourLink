@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="34295ce6-7a0a-4c0e-8d57-025311ccacd6" name="Changes" comment="added hikariconfig for faster database management">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/MyTasksPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/lab6/views/my-tasks-page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/config/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/config/ApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/AbstractController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/ChatPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/ChatPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/CommunityPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/CommunityPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/LoginPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/MainPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/RegisterPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/RegisterPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/ViewTaskPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/ViewTaskPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/domain/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/domain/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/domain/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/domain/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/util/Time.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/domain/validators/UserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/domain/validators/UserValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/service/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/service/RequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/service/RequestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/service/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/lab6/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/lab6/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/lab6/views/community-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/lab6/views/community-page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/lab6/views/main-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/lab6/views/main-page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/lab6/views/register-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/lab6/views/register-page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/lab6/views/view-task-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/lab6/views/view-task-page.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="LAB6" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;thomiir&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/gigi-fanclub/lab6-MAP&quot;,
+    &quot;accountId&quot;: &quot;52bda3ea-0539-450f-bf13-2e09a87bec32&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2oWe6IrrLRZD1mf8mFHgt1X53w6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run with VisualVM&quot;,
+    &quot;Gradle.Build LAB6.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LAB6 [:com.example.lab6.HelloApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LAB6 [:com.example.lab6.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LAB6 [:org.example.lab6.HelloApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LAB6 [:org.example.lab6.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LAB6 [:org.example.lab6.controller.PostalCodeScraper.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LAB6 [dependencies].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/baroa/OneDrive/Desktop/LAB6&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.38505748&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.lab6.domain.validators" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\baroa\OneDrive\Desktop\LAB6\src\main\java\org\example\lab6\controller" />
+      <recent name="C:\Users\baroa\OneDrive\Desktop\LAB6\src\main\java\org\example\lab6\repository" />
+      <recent name="C:\Users\baroa\OneDrive\Desktop\LAB6\src\main\resources\org\example\lab6\views" />
+      <recent name="C:\Users\baroa\OneDrive\Desktop\LAB6\src\main\resources\org\example\lab6\css" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="org.example.lab6.controller" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.example.lab6" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.lab6.HelloApplication" />
+      <module name="LAB6.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.lab6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="22" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.example.lab6.Main" />
+      <module name="LAB6.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostalCodeScraper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.lab6.controller.PostalCodeScraper" />
+      <module name="LAB6.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.lab6.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LAB6 [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PostalCodeScraper" />
+        <item itemvalue="Gradle.LAB6 [dependencies]" />
+        <item itemvalue="Application.HelloApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="34295ce6-7a0a-4c0e-8d57-025311ccacd6" name="Changes" comment="" />
+      <created>1730989585312</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1730989585312</updated>
+      <workItem from="1730989586190" duration="5397000" />
+      <workItem from="1730995125817" duration="3933000" />
+      <workItem from="1730999110162" duration="4700000" />
+      <workItem from="1731055083584" duration="6384000" />
+      <workItem from="1731084252558" duration="8635000" />
+      <workItem from="1731320405244" duration="62000" />
+      <workItem from="1731320815481" duration="20000" />
+      <workItem from="1731321748492" duration="245000" />
+      <workItem from="1731406646325" duration="162000" />
+      <workItem from="1731697297553" duration="5399000" />
+      <workItem from="1731702722753" duration="159000" />
+      <workItem from="1731746057085" duration="12248000" />
+      <workItem from="1731764271362" duration="807000" />
+      <workItem from="1731765088308" duration="4123000" />
+      <workItem from="1731771050878" duration="13808000" />
+      <workItem from="1731791455390" duration="6412000" />
+      <workItem from="1731851677354" duration="1319000" />
+      <workItem from="1731853075789" duration="12353000" />
+      <workItem from="1731868150788" duration="4844000" />
+      <workItem from="1731873260842" duration="3938000" />
+      <workItem from="1731877397860" duration="2447000" />
+      <workItem from="1731923784182" duration="1641000" />
+      <workItem from="1731945474311" duration="331000" />
+      <workItem from="1731946170593" duration="23000" />
+      <workItem from="1731947760705" duration="980000" />
+      <workItem from="1732008917028" duration="1012000" />
+      <workItem from="1732031849751" duration="5962000" />
+      <workItem from="1732111591392" duration="2850000" />
+      <workItem from="1732119481869" duration="6953000" />
+      <workItem from="1732131277235" duration="10110000" />
+      <workItem from="1732180859092" duration="39497000" />
+      <workItem from="1732272399385" duration="18535000" />
+      <workItem from="1732310482434" duration="4427000" />
+      <workItem from="1732361571730" duration="23392000" />
+      <workItem from="1732393007393" duration="319000" />
+      <workItem from="1732546172203" duration="89000" />
+      <workItem from="1732550401759" duration="2511000" />
+      <workItem from="1732648912404" duration="151000" />
+      <workItem from="1732731892638" duration="22000" />
+      <workItem from="1732739340184" duration="3595000" />
+      <workItem from="1732761503321" duration="4976000" />
+      <workItem from="1732796443257" duration="15553000" />
+      <workItem from="1732891541648" duration="6686000" />
+      <workItem from="1732964591892" duration="1755000" />
+      <workItem from="1732976108747" duration="712000" />
+      <workItem from="1732977157775" duration="18000" />
+      <workItem from="1733061861595" duration="1089000" />
+      <workItem from="1733136091927" duration="1265000" />
+      <workItem from="1733153465316" duration="2190000" />
+      <workItem from="1733411350920" duration="327000" />
+      <workItem from="1733411685795" duration="4000" />
+      <workItem from="1733411735161" duration="283000" />
+      <workItem from="1733495512216" duration="411000" />
+      <workItem from="1733509905018" duration="16000" />
+      <workItem from="1733753486092" duration="732000" />
+      <workItem from="1733813906967" duration="796000" />
+      <workItem from="1733828829604" duration="82000" />
+      <workItem from="1733943870206" duration="25000" />
+      <workItem from="1734460264109" duration="200000" />
+    </task>
+    <task id="LOCAL-00001" summary="uof">
+      <option name="closed" value="true" />
+      <created>1731000923865</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731000923865</updated>
+    </task>
+    <task id="LOCAL-00002" summary="uof">
+      <option name="closed" value="true" />
+      <created>1731059590211</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731059590211</updated>
+    </task>
+    <task id="LOCAL-00003" summary="uof">
+      <option name="closed" value="true" />
+      <created>1731059660809</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731059660809</updated>
+    </task>
+    <task id="LOCAL-00004" summary="functioneaza da e urat cu spume">
+      <option name="closed" value="true" />
+      <created>1731852939716</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731852939716</updated>
+    </task>
+    <task id="LOCAL-00005" summary="changed from triple back to tuple">
+      <option name="closed" value="true" />
+      <created>1731857108760</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731857108760</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added controllersuperclass to avoid duplicate code">
+      <option name="closed" value="true" />
+      <created>1731862332498</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731862332498</updated>
+    </task>
+    <task id="LOCAL-00007" summary="cleaned up a bit more">
+      <option name="closed" value="true" />
+      <created>1731870174082</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731870174082</updated>
+    </task>
+    <task id="LOCAL-00008" summary="functional! da e tot urat cu spume codu">
+      <option name="closed" value="true" />
+      <created>1731879812428</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731879812429</updated>
+    </task>
+    <task id="LOCAL-00009" summary="lab7 functional but in need of a cleanup">
+      <option name="closed" value="true" />
+      <created>1732140116196</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732140116196</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added task functionality, still needs work">
+      <option name="closed" value="true" />
+      <created>1732211713536</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732211713536</updated>
+    </task>
+    <task id="LOCAL-00011" summary="made repositories cleaner">
+      <option name="closed" value="true" />
+      <created>1732228168912</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732228168912</updated>
+    </task>
+    <task id="LOCAL-00012" summary="small changes">
+      <option name="closed" value="true" />
+      <created>1732231518873</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732231518873</updated>
+    </task>
+    <task id="LOCAL-00013" summary="small changes">
+      <option name="closed" value="true" />
+      <created>1732393305182</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732393305182</updated>
+    </task>
+    <task id="LOCAL-00014" summary="made repository paginated">
+      <option name="closed" value="true" />
+      <created>1732742860718</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732742860718</updated>
+    </task>
+    <task id="LOCAL-00015" summary="made repository paginated">
+      <option name="closed" value="true" />
+      <created>1732742931984</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732742931984</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added hikariconfig for faster database management">
+      <option name="closed" value="true" />
+      <created>1732818695745</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732818695745</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="uof" />
+    <MESSAGE value="functioneaza da e urat cu spume" />
+    <MESSAGE value="changed from triple back to tuple" />
+    <MESSAGE value="added controllersuperclass to avoid duplicate code" />
+    <MESSAGE value="cleaned up a bit more" />
+    <MESSAGE value="functional! da e tot urat cu spume codu" />
+    <MESSAGE value="lab7 functional but in need of a cleanup" />
+    <MESSAGE value="added task functionality, still needs work" />
+    <MESSAGE value="made repositories cleaner" />
+    <MESSAGE value="small changes" />
+    <MESSAGE value="made repository paginated" />
+    <MESSAGE value="added hikariconfig for faster database management" />
+    <option name="LAST_COMMIT_MESSAGE" value="added hikariconfig for faster database management" />
+  </component>
+</project>

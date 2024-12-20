@@ -1,0 +1,27 @@
+.vbox {
+    -fx-background-color: #222831;
+    -fx-padding: 15;
+    -fx-border-color: #222831;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.anchor-pane {
+    -fx-background-color: #222831;
+}
+
+.button-bar {
+    -fx-background-color: #222831;
+    -fx-border-color: #222831;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10;
+}
+
+.title-label {
+    -fx-background-color:  #00ADB5;
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+}
+
+

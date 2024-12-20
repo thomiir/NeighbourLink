@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" styleClass="anchor-pane" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab6.controller.ChatPageController">
+   <children>
+      <VBox layoutY="-1.0" prefHeight="500.0" prefWidth="500.0">
+         <children>
+            <HBox prefHeight="458.0" prefWidth="500.0">
+               <children>
+                  <ListView fx:id="conversationList" prefHeight="455.0" prefWidth="148.0" style="-fx-background-color: #222831;" />
+                  <Separator opacity="0.0" orientation="VERTICAL" prefHeight="455.0" prefWidth="6.0" />
+                  <VBox>
+                     <children>
+                        <ListView fx:id="chatHistory" prefHeight="424.0" prefWidth="346.0" style="-fx-background-color: #222831;" />
+                        <TextField fx:id="replyToField" prefHeight="25.0" prefWidth="293.0" promptText="replying to" />
+                        <HBox>
+                           <children>
+                              <TextField fx:id="messageInputField" onKeyPressed="#handleSendMessage" prefHeight="25.0" prefWidth="293.0" promptText="Write a message..." />
+                              <Button fx:id="buttonSendMessage" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="Send" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children></HBox>
+             <HBox alignment="CENTER" prefHeight="68.0" prefWidth="500.0" spacing="40" styleClass="button-bar">
+                 <children>
+                     <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleButtonTasksClicked" pickOnBounds="true" preserveRatio="true">
+                         <image>
+                             <Image url="@../images/main-menu.png" />
+                         </image>
+                     </ImageView>
+                     <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleButtonCommunityClicked" pickOnBounds="true" preserveRatio="true">
+                         <image>
+                             <Image url="@../images/neighborhood.png" />
+                         </image>
+                     </ImageView>
+                     <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleButtonChatClicked" pickOnBounds="true" preserveRatio="true">
+                         <image>
+                             <Image url="@../images/chat.png" />
+                         </image>
+                     </ImageView>
+                     <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleButtonFriendsClicked" pickOnBounds="true" preserveRatio="true">
+                         <image>
+                             <Image url="@../images/friends.png" />
+                         </image>
+                     </ImageView>
+                     <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleButtonProfileClicked" pickOnBounds="true" preserveRatio="true">
+                         <image>
+                             <Image url="@../images/user.png" />
+                         </image>
+                     </ImageView>
+                 </children>
+             </HBox>
+         </children>
+      </VBox>
+
+   </children>
+</AnchorPane>
