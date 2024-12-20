@@ -18,4 +18,7 @@
 <ul>
     <li><strong>UI/UX Best Practices:</strong> User interface and user experience design principles are followed to create an intuitive and visually appealing interface, enhancing user engagement and satisfaction.</li>
     <li><strong>Error Handling:</strong> Frontend components include error handling mechanisms to gracefully handle unexpected errors and provide informative error messages to users.</li>
+    <li><strong>MVC Pattern:</strong> Components are split into three parts, for easier work on the modules, smoother adding of features and allowing for better user interfaces.</li>
 </ul>
+
+<h3><a href=https://imgur.com/a/a9Iq7dR>Screenshots</a></h3>
