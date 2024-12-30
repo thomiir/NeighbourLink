@@ -21,4 +21,4 @@
     <li><strong>MVC Pattern:</strong> Components are split into three parts, for easier work on the modules, smoother adding of features and allowing for better user interfaces.</li>
 </ul>
 
-<h3><a href=https://imgur.com/a/a9Iq7dR>Screenshots</a></h3>
+<h3><a href=https://imgur.com/a/tO8TCL0>Screenshots</a></h3>
