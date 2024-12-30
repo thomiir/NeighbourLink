@@ -65,12 +65,6 @@
                           </image>
                       </ImageView>
 
-                      <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleButtonMyTasksClicked" pickOnBounds="true" preserveRatio="true">
-                          <image>
-                              <Image url="@../images/task iconpng.png" />
-                          </image>
-                      </ImageView>
-
                       <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleButtonProfileClicked" pickOnBounds="true" preserveRatio="true">
                           <image>
                               <Image url="@../images/user.png" />

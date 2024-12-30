@@ -27,7 +27,6 @@ public class LoginPageController extends AbstractController {
             getSceneService().addScene("chat", "views/chat-page.fxml");
             getSceneService().addScene("community", "views/community-page.fxml");
             getSceneService().addScene("add-task", "views/add-task-page.fxml");
-            getSceneService().addScene("my-tasks", "views/my-tasks-page.fxml");
             getSceneService().switchScene("tasks");
             handleFriendRequestAlert();
         }

@@ -8,6 +8,7 @@ import java.util.*;
 import java.util.random.RandomGenerator;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import static java.lang.Math.abs;
 
@@ -78,6 +79,7 @@ public class UserService {
         if (findUser(user.getUsername()).isPresent())
             throw new ServiceException("That user already exists!");
         user.setId(generateId());
+        user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
         try {
             userRepository.save(user);
         }
@@ -92,12 +94,17 @@ public class UserService {
     }
 
     public User userLogin(String username, String password) {
-        if (findUser(username).isEmpty())
+        Optional<User> userOptional = findUser(username);
+        if (userOptional.isEmpty())
             throw new ServiceException("That user doesn't exist!");
-        if (findUser(username).isPresent() && !findUser(username).get().getPassword().equals(password))
+        User user = userOptional.get();
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        encoder.encode("password");
+        if (!encoder.matches(password, user.getPassword()))
             throw new ServiceException("Wrong password!");
-        else return findUser(username).get();
+        return user;
     }
+
 
     public List<User> getAllUsersBesides(User paramUser) {
         return StreamSupport.stream(userRepository.findAll().spliterator(), false)

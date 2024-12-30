@@ -6,7 +6,7 @@ public class User extends Entity<Long> {
 
     private final String fullName;
     private final String username;
-    private final String password;
+    private String password;
     private final String email;
     private final String address;
     private final String zipCode;
@@ -42,6 +42,10 @@ public class User extends Entity<Long> {
 
     public String getPassword() {
         return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getAddress() {

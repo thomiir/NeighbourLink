@@ -62,4 +62,11 @@ public class TaskService {
                 .toList()
                 .size();
     }
+
+    public Integer getTasksPostedByUser(User user) {
+        return StreamSupport.stream(taskRepository.findAll().spliterator(), false)
+                .filter(task -> task.getPosterId().equals(user.getId()))
+                .toList()
+                .size();
+    }
 }

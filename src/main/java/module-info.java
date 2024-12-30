@@ -5,6 +5,8 @@ module org.example.lab6 {
     requires java.desktop;
     requires com.zaxxer.hikari;
     requires java.sql;
+    requires spring.boot.autoconfigure;
+    requires spring.security.crypto;
 
     opens org.example.lab6 to javafx.fxml;
     exports org.example.lab6 to javafx.graphics;

@@ -4,37 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34295ce6-7a0a-4c0e-8d57-025311ccacd6" name="Changes" comment="added hikariconfig for faster database management">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/MyTasksPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/lab6/views/my-tasks-page.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/config/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/config/ApplicationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/AbstractController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/ChatPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/ChatPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/CommunityPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/CommunityPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/LoginPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/MainPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/RegisterPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/RegisterPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/ViewTaskPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/controller/ViewTaskPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/domain/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/domain/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/domain/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/domain/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/util/Time.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/domain/validators/UserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/domain/validators/UserValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/service/MessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/service/RequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/service/RequestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/service/TaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lab6/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lab6/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/lab6/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/lab6/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/lab6/views/community-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/lab6/views/community-page.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/lab6/views/main-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/lab6/views/main-page.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/lab6/views/register-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/lab6/views/register-page.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/lab6/views/view-task-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/lab6/views/view-task-page.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="34295ce6-7a0a-4c0e-8d57-025311ccacd6" name="Changes" comment="added hikariconfig for faster database management" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +18,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -100,43 +73,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run with VisualVM&quot;,
-    &quot;Gradle.Build LAB6.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LAB6 [:com.example.lab6.HelloApplication.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LAB6 [:com.example.lab6.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LAB6 [:org.example.lab6.HelloApplication.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LAB6 [:org.example.lab6.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LAB6 [:org.example.lab6.controller.PostalCodeScraper.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LAB6 [dependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/baroa/OneDrive/Desktop/LAB6&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.38505748&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run with VisualVM",
+    "Gradle.Build LAB6.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.LAB6 [:com.example.lab6.HelloApplication.main()].executor": "Run",
+    "Gradle.LAB6 [:com.example.lab6.Main.main()].executor": "Run",
+    "Gradle.LAB6 [:org.example.lab6.HelloApplication.main()].executor": "Run",
+    "Gradle.LAB6 [:org.example.lab6.Main.main()].executor": "Run",
+    "Gradle.LAB6 [:org.example.lab6.controller.PostalCodeScraper.main()].executor": "Run",
+    "Gradle.LAB6 [dependencies].executor": "Run",
+    "Gradle.Load Gradle Dependencies.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/baroa/OneDrive/Desktop/LAB6",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.38505748",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.lab6.domain.validators" />
@@ -295,6 +268,11 @@
       <workItem from="1733828829604" duration="82000" />
       <workItem from="1733943870206" duration="25000" />
       <workItem from="1734460264109" duration="200000" />
+      <workItem from="1734694212918" duration="49000" />
+      <workItem from="1734789942238" duration="17000" />
+      <workItem from="1735142381713" duration="250000" />
+      <workItem from="1735549238579" duration="32000" />
+      <workItem from="1735565254878" duration="10415000" />
     </task>
     <task id="LOCAL-00001" summary="uof">
       <option name="closed" value="true" />
@@ -444,5 +422,16 @@
     <MESSAGE value="made repository paginated" />
     <MESSAGE value="added hikariconfig for faster database management" />
     <option name="LAST_COMMIT_MESSAGE" value="added hikariconfig for faster database management" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/lab6/controller/LoginPageController.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

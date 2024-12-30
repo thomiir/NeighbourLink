@@ -3,9 +3,17 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>1253</IntrospectionStateNumber>
+      <Grants>1||-9223372036854775808|c|G
+1||10|c|G
+1||10|C|G
+1||10|T|G
+4||-9223372036854775808|c|G
+4||10|c|G
+4||10|C|G
+4||10|T|G</Grants>
+      <IntrospectionStateNumber>1264</IntrospectionStateNumber>
       <ServerVersion>17.0</ServerVersion>
-      <StartupTime>1732074674</StartupTime>
+      <StartupTime>1734008460</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -809,7 +817,7 @@ false Zulu
 14704||10|C|G
 14704||-9223372036854775808|U|G
 14704||10|U|G</Grants>
-      <IntrospectionStateNumber>1253</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1264</IntrospectionStateNumber>
       <ObjectId>16388</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4231,8 +4239,8 @@ false Zulu
     <schema id="266" parent="4" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1253</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-11-29.15:00:48</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>1264</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-12-30.14:09:18</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4449,50 +4457,44 @@ receiver</ColNames>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <column id="299" parent="271" name="first_name">
+    <column id="299" parent="271" name="full_name">
       <Position>4</Position>
-      <StateNumber>779</StateNumber>
+      <StateNumber>1255</StateNumber>
       <StoredType>varchar|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="300" parent="271" name="last_name">
-      <Position>5</Position>
-      <StateNumber>779</StateNumber>
-      <StoredType>varchar|0s</StoredType>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="301" parent="271" name="username">
+    <column id="300" parent="271" name="username">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>838</StateNumber>
       <StoredType>varchar|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="302" parent="271" name="password">
+    <column id="301" parent="271" name="password">
       <Position>7</Position>
       <StateNumber>1157</StateNumber>
       <StoredType>varchar|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="303" parent="271" name="email">
+    <column id="302" parent="271" name="email">
       <Position>8</Position>
       <StateNumber>897</StateNumber>
       <StoredType>varchar|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="304" parent="271" name="address">
+    <column id="303" parent="271" name="address">
       <Position>10</Position>
       <StateNumber>1252</StateNumber>
       <StoredType>varchar|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="305" parent="271" name="zip_code">
+    <column id="304" parent="271" name="zip_code">
       <Position>11</Position>
       <StateNumber>1169</StateNumber>
       <StoredType>varchar|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="306" parent="271" name="users_pkey">
+    <index id="305" parent="271" name="users_pkey">
       <ColNames>username</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>32787</ObjectId>
@@ -4504,7 +4506,7 @@ receiver</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="307" parent="271" name="users_pkey">
+    <key id="306" parent="271" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>32788</ObjectId>
       <Primary>1</Primary>

@@ -60,7 +60,10 @@ public class SceneService {
     public void switchScene(String name) {
         Scene scene = scenes.get(name);
         if (scene != null)
+        {
             primaryStage.setScene(scene);
+            primaryStage.show();
+        }
         else
             System.out.println("Scene not found: " + name);
     }
