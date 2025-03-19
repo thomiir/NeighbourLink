@@ -1,4 +1,4 @@
-<h1>NeighbourLink [WORK IN PROGRESS]</h1>
+<h1>NeighbourLink</h1>
 
 <p>Hi! This project is still a work in progress and I am confident it will be of great use to many people once finished.
 <p>The intention is for the user to create an account, then the application will assign the user to their community based on the given zip-code, where they can request help from their neighbours.</p>
