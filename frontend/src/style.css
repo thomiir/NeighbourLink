@@ -1,0 +1,151 @@
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color : grey;
+}
+
+nav {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 3px 2px #f1f1f1;
+}
+
+.navbar-item {
+    list-style-type: none;
+    margin-left: 2rem;
+    font-family: Merriweather;
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-item {
+    display: flex;
+    list-style-type: none;
+}
+
+.promo-title {
+    text-align: center;
+    font-size: 3rem;
+    font-family: Merriweather;
+
+}
+
+.feedback-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: Merriweather;
+}
+
+.promo-container {
+    display: flex;
+}
+
+.promo-img {
+    height: 30rem;
+    padding-right: 5rem;
+}
+
+.promo-text {
+    font-family: Merriweather;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    text-align: justify;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.feedback-text {
+    font-family: Merriweather;
+    text-align: justify;
+    border-width: thin;
+    border-style: solid;
+    border-color: #e4ebf3;
+    height: 20rem;
+    width: 30rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    padding: 1rem 1rem 2rem 1rem;
+    font-style: italic;
+}
+
+.feedback-container {
+    display: flex;
+    justify-content: center;
+    padding-right: 7rem;
+    padding-left: 7rem;
+    padding-bottom: 3rem;
+}
+
+.feedback-user {
+    font-family: Merriweather;
+    font-weight: normal;
+}
+
+.feedback-username {
+    font-family: Merriweather;
+    font-weight: bold;
+}
+
+.promo-div{
+    background-color: #f5f7fa;
+}
+
+.login-button {
+    height: 2.5rem;
+    width: 6rem;
+    background-color: #1a1b1f;
+    color: white;
+    text-align: center;
+    align-content: center;
+    font-family: Merriweather;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.join-button {
+    height: 2.5rem;
+    width: 10rem;
+    background-color: #1a1b1f;
+    color: white;
+    text-align: center;
+    align-content: center;
+    font-family: Merriweather;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.navbar-logo {
+    font-weight: bold;
+    font-family: Merriweather;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+.footer-item {
+    display: flex;
+    list-style-type: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-family: Merriweather;
+}
+
+.footer-list {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.5rem;
+}
+
