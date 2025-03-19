@@ -5,6 +5,7 @@ const Footer = () => {
     return (
         <div className="promo-div">
             <footer>
+                <br/>
                 <ul className="footer-list">
                     <li className="footer-item">Home</li>
                     <li className="footer-item">About Us</li>
