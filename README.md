@@ -1,0 +1,1 @@
+Ambitious full-stack application developed using Spring Boot and React. Code is still a work in progress (as only the landing page and 80% of the backend code are done), but a screenshot of the site's current state can be found <a href="https://imgur.com/a/uV2idI0">here</a>.
