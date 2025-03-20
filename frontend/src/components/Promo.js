@@ -1,5 +1,5 @@
 import React from "react";
-import promoImage from "../promo-img-removebg-preview.png";
+import promoImage from "../promo-img-removebg-preview.jpg";
 import ".././style.css";
 
 const Promo = () => {

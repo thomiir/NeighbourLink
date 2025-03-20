@@ -1,0 +1,41 @@
+import {GaugeContainer, GaugeReferenceArc, GaugeValueArc, useGaugeState} from "@mui/x-charts/Gauge";
+import React from "react";
+
+export function CompositionExample() {
+    return (
+        <GaugeContainer
+            width={250}
+            height={250}
+            startAngle={-110}
+            endAngle={110}
+            value={30}
+        >
+            <GaugeReferenceArc />
+            <GaugeValueArc />
+            <GaugePointer />
+        </GaugeContainer>
+    );
+}
+
+function GaugePointer() {
+    const { valueAngle, outerRadius, cx, cy } = useGaugeState();
+
+    if (valueAngle === null) {
+        return null;
+    }
+
+    const target = {
+        x: cx + outerRadius * Math.sin(valueAngle),
+        y: cy - outerRadius * Math.cos(valueAngle),
+    };
+    return (
+        <g>
+            <circle cx={cx} cy={cy} r={5} fill="red" />
+            <path
+                d={`M ${cx} ${cy} L ${target.x} ${target.y}`}
+                stroke="red"
+                strokeWidth={3}
+            />
+        </g>
+    );
+}

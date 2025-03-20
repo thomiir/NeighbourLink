@@ -11,7 +11,7 @@ const feedbackData = [
         review: "5 stars on Yelp"
     },
     {
-        text: "NeighbourLink is such a great idea! I used it to find someone who could give me a lift to the grocery store when mycar broke down. The person I " +
+        text: "NeighbourLink is such a great idea! I used it to find someone who could give me a lift to the grocery store when my car broke down. The person I " +
             "connected with was super friendly and made the whole experience really pleasant. The only thing I’d love to see improved is more people using it in my " +
             "area, but overall, it’s a fantastic app that helps you feel more connected to your community!",
         user: "John M.",
