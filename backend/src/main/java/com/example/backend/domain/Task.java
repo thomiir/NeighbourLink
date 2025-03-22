@@ -8,18 +8,18 @@ import java.time.LocalDateTime;
 public class Task extends Entity<Long> {
     private final String title;
     private final String description;
-    private final Long posterId;
-    private Long solverId;
-    private final LocalDateTime datePosted;
-    private final Time length;
+    private final User poster;
+    private User solver;
+    private final String datePosted;
+    private final String length;
     private final TaskType type;
 
-    public Long getSolverId() {
-        return solverId;
+    public User getSolverId() {
+        return solver;
     }
 
-    public void setSolverId(Long solverId) {
-        this.solverId = solverId;
+    public void setSolverId(User solverId) {
+        this.solver = solverId;
     }
 
     public String getTitle() {
@@ -30,15 +30,15 @@ public class Task extends Entity<Long> {
         return description;
     }
 
-    public Long getPosterId() {
-        return posterId;
+    public User getPosterId() {
+        return poster;
     }
 
-    public LocalDateTime getDatePosted() {
+    public String getDatePosted() {
         return datePosted;
     }
 
-    public Time getLength() {
+    public String getLength() {
         return length;
     }
 
@@ -46,13 +46,13 @@ public class Task extends Entity<Long> {
         return type;
     }
 
-    public Task(Long id, String title, String description, Long posterId, Long solverId, LocalDateTime datePosted, String length, TaskType type) {
+    public Task(Long id, String title, String description, User poster, User solver, String datePosted, String length, TaskType type) {
         this.title = title;
         this.description = description;
-        this.posterId = posterId;
-        this.solverId = solverId;
+        this.poster = poster;
+        this.solver = solver;
         this.datePosted = datePosted;
-        this.length = Time.parse(length);
+        this.length = length;
         this.type = type;
         this.setId(id);
     }

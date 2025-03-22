@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.StreamSupport;
 
-@CrossOrigin(origins="http://localhost:3001")
+@CrossOrigin(origins="http://localhost:3000")
 @RestController
 @RequestMapping("/api/users")
 public class UserController {

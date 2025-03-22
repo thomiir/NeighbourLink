@@ -4,18 +4,17 @@ import com.example.backend.domain.Task;
 import com.example.backend.domain.constants.TaskType;
 import com.example.backend.util.paging.Page;
 import com.example.backend.util.paging.Pageable;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class TaskRepository extends AbstractRepository<Long, Task> implements PagingRepository<Long, Task> {
+public class TaskRepository extends AbstractRepository<Long, Task> implements PagedRepository<Long, Task> {
 
+    private UserRepository userRepository;
 
     @Override
     protected Task createEntity(ResultSet resultSet) throws SQLException {
@@ -23,9 +22,9 @@ public class TaskRepository extends AbstractRepository<Long, Task> implements Pa
                 resultSet.getLong("id"),
                 resultSet.getString("title"),
                 resultSet.getString("description"),
-                resultSet.getLong("poster_id"),
-                resultSet.getLong("solver_id"),
-                resultSet.getTimestamp("date_posted").toLocalDateTime(),
+                userRepository.findOne(resultSet.getLong("poster_id")).get(),
+                userRepository.findOne(resultSet.getLong("solver_id")).get(),
+                Date.valueOf(resultSet.getTimestamp("date_posted").toLocalDateTime().toLocalDate()).toString(),
                 resultSet.getString("length"),
                 TaskType.valueOf(resultSet.getString("type")));
     }
@@ -65,11 +64,16 @@ public class TaskRepository extends AbstractRepository<Long, Task> implements Pa
 
     }
 
+    @Autowired
+    public void setUserRepository(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
     @Override
     public Page<Task> findAllOnPage(Pageable pageable) {
         List<Task> entities = new ArrayList<>();
         try (Connection connection = prepareConnection();
-             PreparedStatement ps = connection.prepareStatement("SELECT * FROM tasks limit " + pageable.getPageSize() + " OFFSET " + (pageable.getPageNumber() - 1) * pageable.getPageSize());
+             PreparedStatement ps = connection.prepareStatement("SELECT * FROM tasks limit " + pageable.pageSize() + " OFFSET " + (pageable.pageNumber() - 1) * pageable.pageSize());
              ResultSet resultSet = ps.executeQuery()) {
             while (resultSet.next())
                 entities.add(createEntity(resultSet));
@@ -78,5 +82,4 @@ public class TaskRepository extends AbstractRepository<Long, Task> implements Pa
         }
         return new Page<>(entities);
     }
-
 }

@@ -3,7 +3,7 @@ package com.example.backend.service;
 import com.example.backend.domain.Task;
 import com.example.backend.domain.User;
 import com.example.backend.domain.constants.SortingCriteria;
-import com.example.backend.repository.PagingRepository;
+import com.example.backend.repository.PagedRepository;
 import com.example.backend.repository.Repository;
 import com.example.backend.util.paging.Page;
 import com.example.backend.util.paging.Pageable;
@@ -17,13 +17,11 @@ import static java.util.Comparator.comparing;
 
 @Service
 public class TaskService {
-    private final Repository<Long, Task> taskRepository;
+    private final PagedRepository<Long, Task> taskRepository;
 
-    public TaskService(Repository<Long, Task> taskRepository, Repository<Long, User> userRepository) {
+    public TaskService(PagedRepository<Long, Task> taskRepository, Repository<Long, User> userRepository) {
         this.taskRepository = taskRepository;
     }
-
-
 
     private Comparator<Task> getCriteriaComparator(SortingCriteria criteria) {
         return switch (criteria) {
@@ -36,9 +34,9 @@ public class TaskService {
     }
 
 
-//    public Page<Task> findAllOnPage(Pageable pageable) {
-//        return taskRepository.findAllOnPage(pageable);
-//    }
+    public Page<Task> findAllOnPage(Pageable pageable) {
+        return taskRepository.findAllOnPage(pageable);
+    }
     
     public Integer count() {
         return ((int) StreamSupport.stream(taskRepository.findAll().spliterator(), false).count());
@@ -56,10 +54,5 @@ public class TaskService {
                 .filter(task -> task.getPosterId().equals(user.getId()))
                 .toList()
                 .size();
-    }
-
-    public List<Task> getAllTasks() {
-        return StreamSupport.stream(taskRepository.findAll().spliterator(), false)
-                .toList();
     }
 }

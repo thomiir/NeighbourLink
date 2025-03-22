@@ -7,6 +7,7 @@ import Profile from "./pages/Profile";
 import Feedback from "./components/Feedback";
 import Tasks from "./pages/Tasks";
 import YourTasks from "./pages/YourTasks";
+import Login from "./pages/Login";
 
 const AppContent = () => {
     const location = useLocation();
@@ -21,6 +22,7 @@ const AppContent = () => {
                 <Route path="/tasks/your-tasks" element={<YourTasks />} />
                 <Route path="/tasks/all-tasks" element={<YourTasks />} />
                 <Route path="/profile" element={<Profile />} />
+                <Route path="/login" element={<Login/>}/>
             </Routes>
             {location.pathname === "/" && <Feedback />}
             <Footer />

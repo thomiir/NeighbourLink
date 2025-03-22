@@ -159,10 +159,6 @@ nav {
     background-color: #f5f7fa;
 }
 
-.table-items {
-    font-family: Merriweather;
-    border-spacing: 1.5rem;
-}
 
 
 .stats {
@@ -208,9 +204,9 @@ nav {
 
 .table-items {
     font-family: Merriweather;
-    border-spacing: 8rem 2rem;
+    border-spacing: 6.5rem 2rem;
     border-width: thin;
-    border-color: #e4ebf3;
+    border-color: #e4ecf0;
     border-style: solid;
     border-radius: 2rem;
 }
@@ -220,7 +216,7 @@ nav {
     text-align: center;
     overflow-x: auto;
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 97%;
 }
 
 .pagination {
