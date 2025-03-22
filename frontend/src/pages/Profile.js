@@ -1,10 +1,18 @@
 import React from "react";
 import profileImg from "../profile-removebg-preview.jpg"
 import {CompositionExample} from "../components/Gauge";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import {useAuth} from "../components/AuthContext";
+import {useNavigate} from "react-router-dom";
 
 const Profile = () => {
+    const {setIsLoggedIn} = useAuth();
+    const navigate = useNavigate();
     return (
-        <div>  {/**/}
+        <>
+        <Header/>
+        <div>
             <div className="profile-items">
                 <img src={profileImg} alt="profile-picture" height={250}></img>
 
@@ -49,7 +57,10 @@ const Profile = () => {
 
                 </div>
             </div>
+            <button onClick={() => {setIsLoggedIn(false); navigate("/");}}>Logout</button>
         </div>
+        <Footer/>
+        </>
     );
 };
 

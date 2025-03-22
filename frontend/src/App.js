@@ -1,39 +1,29 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
-import Header from "./components/Header";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HeaderLogin from "./components/Header";
 import Promo from "./components/Promo";
 import Footer from "./components/Footer";
 import Profile from "./pages/Profile";
 import Feedback from "./components/Feedback";
-import Tasks from "./pages/Tasks";
 import YourTasks from "./pages/YourTasks";
 import Login from "./pages/Login";
-
-const AppContent = () => {
-    const location = useLocation();
-    return (
-        <>
-            <Header />
-            <Routes>
-                <Route path="/" element={<Promo />} />
-                <Route path="/community" element={<Promo />} />
-                <Route path="/chat" element={<Promo />} />
-                <Route path="/tasks" element={<Tasks />} />
-                <Route path="/tasks/your-tasks" element={<YourTasks />} />
-                <Route path="/tasks/all-tasks" element={<YourTasks />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/login" element={<Login/>}/>
-            </Routes>
-            {location.pathname === "/" && <Feedback />}
-            <Footer />
-        </>
-    );
-};
+import AllTasks from "./pages/AllTasks";
+import {AuthProvider} from "./components/AuthContext";
 
 const App = () => (
-    <Router>
-        <AppContent />
-    </Router>
+    <AuthProvider>
+        <Router>
+            <Routes>
+                <Route path="/" element={<><HeaderLogin /><Promo /><Feedback /><Footer /></>} />
+                <Route path="/community" element={<Promo />} />
+                <Route path="/chat" element={<Promo />} />
+                <Route path="/your-tasks" element={<YourTasks />} />
+                <Route path="/all-tasks" element={<AllTasks />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/logon" element={<Login/>}/>
+            </Routes>
+        </Router>
+    </AuthProvider>
 );
 
 export default App;

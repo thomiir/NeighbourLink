@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-const username = "parola";
-const password = "parola";
-const authHeader = "Basic " + btoa(`${username}:${password}`);
+const authHeader = "Basic " + btoa(`${process.env.REACT_APP_USERNAME}:${process.env.REACT_APP_PASSWORD}`);
 
 const YourTasks = () => {
     const [tasks, setTasks] = useState([]);
@@ -60,6 +60,8 @@ const YourTasks = () => {
     }
 
     return (
+        <>
+        <Header/>
         <div className="your-tasks">
             <h1 className="tasks-title">Your posted tasks</h1>
             <button className="add-task-button">ADD TASK</button>
@@ -95,6 +97,8 @@ const YourTasks = () => {
                 <button className="pagination-button" onClick={handleNext}>Next</button>
             </div>
         </div>
+        <Footer/>
+        </>
     );
 };
 

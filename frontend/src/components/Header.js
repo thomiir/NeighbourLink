@@ -1,20 +1,28 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "../style.css";
+import {Link} from "react-router-dom";
+import React from "react";
+import {useAuth} from "./AuthContext";
 
 const Header = () => {
+    const {isLoggedIn} = useAuth();
+
     return (
         <nav>
             <Link to="/" className="navbar-logo">NeighbourLink</Link>
             <ul className="navbar-list">
                 <li className="navbar-item"><Link to="/community">Community</Link></li>
                 <li className="navbar-item"><Link to="/chat">Chat</Link></li>
-                <li className="navbar-item"><Link to="/tasks">Tasks</Link></li>
-                <li className="navbar-item"><Link to="/profile">Profile</Link></li>
+                <li className="navbar-item"><Link to="/all-tasks">All Tasks</Link></li>
+                <li className="navbar-item"><Link to="/your-tasks">Your Tasks</Link></li>
             </ul>
-            <Link to="/login" className="login-button">LOGIN</Link>
+            {isLoggedIn ? (
+                <>
+                    <Link to="/profile" className="login-button">DASHBOARD</Link>
+                </>
+                ) : (
+                    <Link to="/logon" className="login-button">LOGIN</Link>
+                )}
         </nav>
     );
-};
+}
 
 export default Header;
