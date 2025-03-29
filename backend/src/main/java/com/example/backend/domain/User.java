@@ -1,33 +1,22 @@
 package com.example.backend.domain;
 
+import jakarta.persistence.Table;
+
 import java.util.Objects;
 
+@jakarta.persistence.Entity
+@Table(name="users")
 public class User extends Entity<Long> {
 
-    private final String fullName;
-    private final String username;
+    private String fullName;
+    private String username;
     private String password;
-    private final String email;
-    private final String address;
-    private final String zipCode;
+    private String email;
+    private String address;
+    private String zipCode;
 
-    public User(String fullName, String email, String username, String password, String address, String zipCode) {
-        this.fullName = fullName;
-        this.email = email;
-        this.username = username;
-        this.password = password;
-        this.address = address;
-        this.zipCode = zipCode;
-    }
+    public User() {
 
-    public User(Long id, String fullName, String username, String password, String email, String address, String zipCode) {
-        this.address = address;
-        this.zipCode = zipCode;
-        this.id = id;
-        this.fullName = fullName;
-        this.username = username;
-        this.password = password;
-        this.email = email;
     }
 
     public String getUsername() {
@@ -42,10 +31,6 @@ public class User extends Entity<Long> {
 
     public String getPassword() {
         return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getAddress() {

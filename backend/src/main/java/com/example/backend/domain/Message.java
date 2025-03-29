@@ -1,39 +1,42 @@
 package com.example.backend.domain;
 
 
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+
+@jakarta.persistence.Entity
+@Table(name="messages")
 public class Message extends Entity<Long> {
-    private final Long senderId;
-    private final Long receiverId;
+
+    @ManyToOne()
+    @JoinColumn(name="sender")
+    private User sender;
+
+    @ManyToOne()
+    @JoinColumn(name="receiver")
+    private User receiver;
     private String text;
-    private final Long replyMessageId;
 
+    @ManyToOne()
+    @JoinColumn(name="reply")
+    private Message replyMessage;
 
-    public Message(Long sender, Long receiver, String text, Long replyMessage) {
-        this.senderId = sender;
-        this.receiverId = receiver;
-        this.text = text;
-        this.replyMessageId = replyMessage;
+    public Message() {}
+
+    public User getSender() {
+        return sender;
     }
 
-    public Long getSender() {
-        return senderId;
-    }
-
-    public Long getReceiver() {
-        return receiverId;
+    public User getReceiver() {
+        return receiver;
     }
 
     public String getText() {
         return text;
     }
 
-    public Long getReplyMessage() {
-        return replyMessageId;
+    public Message getReplyMessage() {
+        return replyMessage;
     }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
-
 }

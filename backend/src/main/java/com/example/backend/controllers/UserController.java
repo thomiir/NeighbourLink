@@ -15,6 +15,8 @@ import java.util.stream.StreamSupport;
 public class UserController {
     private final UserService userService;
 
+    private User loggedUser;
+
     public UserController(UserService userService) {
         this.userService = userService;
     }
@@ -23,12 +25,18 @@ public class UserController {
     public Map<String, Boolean> login(@RequestParam String username, @RequestParam String password) {
 
         try {
-            User user = userService.userLogin(username, password);
-            System.out.println(user);
+            loggedUser = userService.userLogin(username, password);
             return Map.of("login", true);
         }
         catch (Exception e) {
             return Map.of("login", false);
         }
     }
+
+    @GetMapping("/userData")
+    public User getUserData(@RequestParam String username) {
+        return userService.findUser(username).get();
+    }
+
+
 }

@@ -1,25 +1,35 @@
 package com.example.backend.domain;
 
-import com.example.backend.domain.constants.TaskType;
-import com.example.backend.util.Time;
+import com.example.backend.domain.enums.TaskType;
+import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
 
+@jakarta.persistence.Entity
+@Table(name="tasks")
 public class Task extends Entity<Long> {
-    private final String title;
-    private final String description;
-    private final User poster;
+    private String title;
+
+    private String description;
+
+    @ManyToOne
+    @JoinColumn(name="poster_id")
+    private User poster;
+
+    @ManyToOne
+    @JoinColumn(name="solver_id")
     private User solver;
-    private final String datePosted;
-    private final String length;
-    private final TaskType type;
+
+    private String datePosted;
+
+    private String length;
+
+    @Enumerated(EnumType.STRING)
+    private TaskType type;
+
+    public Task() {}
 
     public User getSolverId() {
         return solver;
-    }
-
-    public void setSolverId(User solverId) {
-        this.solver = solverId;
     }
 
     public String getTitle() {
@@ -44,16 +54,5 @@ public class Task extends Entity<Long> {
 
     public TaskType getType() {
         return type;
-    }
-
-    public Task(Long id, String title, String description, User poster, User solver, String datePosted, String length, TaskType type) {
-        this.title = title;
-        this.description = description;
-        this.poster = poster;
-        this.solver = solver;
-        this.datePosted = datePosted;
-        this.length = length;
-        this.type = type;
-        this.setId(id);
     }
 }

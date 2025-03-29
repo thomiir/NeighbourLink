@@ -2,57 +2,38 @@ package com.example.backend.service;
 
 import com.example.backend.domain.Task;
 import com.example.backend.domain.User;
-import com.example.backend.domain.constants.SortingCriteria;
-import com.example.backend.repository.PagedRepository;
-import com.example.backend.repository.Repository;
-import com.example.backend.util.paging.Page;
-import com.example.backend.util.paging.Pageable;
+import com.example.backend.repository.ITaskRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.Comparator;
 import java.util.List;
-import java.util.stream.StreamSupport;
-
-import static java.util.Comparator.comparing;
 
 @Service
 public class TaskService {
-    private final PagedRepository<Long, Task> taskRepository;
+    private final ITaskRepository taskRepository;
 
-    public TaskService(PagedRepository<Long, Task> taskRepository, Repository<Long, User> userRepository) {
+    public TaskService(ITaskRepository taskRepository) {
         this.taskRepository = taskRepository;
     }
 
-    private Comparator<Task> getCriteriaComparator(SortingCriteria criteria) {
-        return switch (criteria) {
-            case DATE -> comparing(Task::getDatePosted);
-            case TITLE -> comparing(Task::getTitle);
-            case TYPE -> comparing(Task::getType);
-            case DURATION -> comparing(Task::getLength);
-            default -> null;
-        };
-    }
-
-
     public Page<Task> findAllOnPage(Pageable pageable) {
-        return taskRepository.findAllOnPage(pageable);
+        return taskRepository.findAll(pageable);
     }
     
-    public Integer count() {
-        return ((int) StreamSupport.stream(taskRepository.findAll().spliterator(), false).count());
+    public Integer allCount() {
+        return taskRepository.findAll().size();
     }
 
     public Integer getTasksSolvedByUser(User user) {
-        return StreamSupport.stream(taskRepository.findAll().spliterator(), false)
-                .filter(task -> task.getSolverId().equals(user.getId()))
-                .toList()
-                .size();
+        return taskRepository.findBySolver(user);
     }
 
-    public Integer getTasksPostedByUser(User user) {
-        return StreamSupport.stream(taskRepository.findAll().spliterator(), false)
-                .filter(task -> task.getPosterId().equals(user.getId()))
-                .toList()
-                .size();
+    public List<Task> getTasksPostedByUserOnPage(User user, Pageable pageable) {
+        return taskRepository.findByPoster(user, pageable).toList();
+    }
+
+    public Integer tasksPostedByUserCount(User user) {
+        return taskRepository.findByPoster(user);
     }
 }

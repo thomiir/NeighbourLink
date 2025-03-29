@@ -129,6 +129,10 @@ nav {
     letter-spacing: 2px;
 }
 
+.join-button:hover {
+    cursor: pointer;
+}
+
 .navbar-logo {
     font-weight: bold;
     font-family: Merriweather;
@@ -153,25 +157,19 @@ nav {
 
 .profile-items {
     display: flex;
-    padding-left: 10rem;
-    padding-top: 5rem;
-    padding-right: 10rem;
+    justify-content: space-evenly;
+    padding: 3rem;
     background-color: #f5f7fa;
 }
 
-
-
 .stats {
     display: flex;
-    padding-left: 10rem;
-    padding-right: 10rem;
+    justify-content: space-evenly;
 }
 
 .stats-list {
     list-style-type: none;
     font-family: Merriweather;
-    padding-left: 10rem;
-    padding-right: 10rem;
 }
 
 .stats-item {
@@ -204,7 +202,7 @@ nav {
 
 .table-items {
     font-family: Merriweather;
-    border-spacing: 6.5rem 2rem;
+    border-spacing: 5rem 2rem;
     border-width: thin;
     border-color: #e4ecf0;
     border-style: solid;
@@ -212,11 +210,11 @@ nav {
 }
 
 .tasks-table {
-    padding-top: 3rem;
+    padding: 3rem;
     text-align: center;
-    overflow-x: auto;
     margin: 0 auto;
-    max-width: 97%;
+    justify-content: space-evenly;
+    display: flex;
 }
 
 .pagination {
@@ -235,4 +233,19 @@ nav {
     color: white;
     width: 6rem;
     height: 2.5rem;
+}
+
+.your-tasks-header {
+    font-family: Merriweather;
+    background-color: #f5f7fa;
+    padding: 3rem 8rem;
+}
+
+.textarea {
+    font-family: Merriweather;
+    resize: none;
+    border-radius: 0.9rem;
+    text-align: center;
+    line-height: 2rem;
+    height: 2rem;
 }

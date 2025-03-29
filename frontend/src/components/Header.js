@@ -16,7 +16,7 @@ const Header = () => {
             </ul>
             {isLoggedIn ? (
                 <>
-                    <Link to="/profile" className="login-button">DASHBOARD</Link>
+                    <Link to="/profile" className="login-button">VIEW PROFILE</Link>
                 </>
                 ) : (
                     <Link to="/logon" className="login-button">LOGIN</Link>

@@ -7,7 +7,7 @@ const Footer = () => {
             <footer>
                 <br/>
                 <ul className="footer-list">
-                    <li className="footer-item">Home</li>
+                    <li className="footer-item"><a href="/">Home</a></li>
                     <li className="footer-item">About Us</li>
                     <li className="footer-item">Contact</li>
                     <li className="footer-item">Privacy Policy</li>

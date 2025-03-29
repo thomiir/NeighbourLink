@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext, useEffect, useState} from "react";
 import profileImg from "../profile-removebg-preview.jpg"
 import {CompositionExample} from "../components/Gauge";
 import Footer from "../components/Footer";
@@ -6,9 +6,23 @@ import Header from "../components/Header";
 import {useAuth} from "../components/AuthContext";
 import {useNavigate} from "react-router-dom";
 
+const authHeader = "Basic " + btoa(`${process.env.REACT_APP_USERNAME}:${process.env.REACT_APP_PASSWORD}`);
+
 const Profile = () => {
-    const {setIsLoggedIn} = useAuth();
+    const {username, setIsLoggedIn} = useAuth();
+    const [userData, setUserData] = useState([]);
     const navigate = useNavigate();
+
+    useEffect(() => {
+        fetch(`http://localhost:8081/api/users/userData?username=${username}`, {
+            method: "GET",
+            headers: {
+                "Authorization": authHeader,
+                "Content-Type": "application/json"
+            }
+        }).then(res => res.json()).then(userData => setUserData(userData));
+    },[]);
+
     return (
         <>
         <Header/>
@@ -22,21 +36,21 @@ const Profile = () => {
                         <tbody>
                         <tr>
                             <td>Username:</td>
-                            <td><textarea disabled={true} style={{resize: "none"}}></textarea></td>
+                            <td><textarea disabled={true} className='textarea' value={userData['username']}></textarea></td>
                             <td>Full name:</td>
-                            <td><textarea disabled={true} style={{resize: "none"}}></textarea></td>
+                            <td><textarea disabled={true} className='textarea' value={userData['fullName']}></textarea></td>
                         </tr>
                         <tr>
                             <td>Password:</td>
-                            <td><textarea disabled={true} style={{resize: "none"}}></textarea></td>
+                            <td><input type="password" disabled={true} className='textarea' value={userData['password']}></input></td>
                             <td>Address:</td>
-                            <td><textarea disabled={true} style={{resize: "none"}}></textarea></td>
+                            <td><textarea disabled={true} className='textarea' value={userData['address']}></textarea></td>
                         </tr>
                         <tr>
                             <td>Email address</td>
-                            <td><textarea disabled={true} style={{resize: "none"}}></textarea></td>
+                            <td><textarea disabled={true} className='textarea' value={userData['email']}></textarea></td>
                             <td>Community (Zip code)</td>
-                            <td><textarea disabled={true} style={{resize: "none"}}></textarea></td>
+                            <td><textarea disabled={true} className='textarea' value={userData['zipCode']}></textarea></td>
                         </tr>
                         </tbody>
                     </table>
